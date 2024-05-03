@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    font-family: "Varela Round", sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 0.5px solid black; */
+    padding: 2.5vh;
+}
+.logoOne{
+    width: 3rem;
+    height: 3rem;
+}
+.details{
+    display: flex;
+    align-items: center;
+}
+.circle{
+    width: 3rem;
+    height: 3rem;
+}
+
+.details *{
+    margin-right: 2.5vh;
+}
+.details button{
+    width: 7rem;
+    height: 2rem;
+}
+.nav-flex{
+    display: flex;
+}
+.search{
+    width: 60rem;
+    margin-left: 10rem;
+    border: none;
+    background-color: #efefef;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    outline: none;
+}
+.search-btn img{
+    width: 1.5rem;
+}
+.search-btn{
+    border-left: none;
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 4rem;
+    background-color: #e6e3e3;
+    cursor: pointer;
+}
+.add{
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: rgb(188, 188, 188);
+}
+.add:hover{
+    border: 1px solid black;
+    color: black;
+}
+input::placeholder{
+    padding: 1px;
+}
+input[type="text"] {
+    padding-left: 20px; 
+}
+p{
+    color: rgb(188, 188, 188);
+    cursor: pointer;
+}
+p:hover{
+    color: black;
+}
