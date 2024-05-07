@@ -18,7 +18,8 @@ ImageIsle is a curated collection of high-quality stock images available for fre
 To start browsing and downloading images from ImageIsle, simply visit [website URL(will be updated SOON)] and start exploring! Use the search bar to find specific images or browse through our categories to discover new favorites.
 
 
-## Frontend - https://imageisle.netlify.app
+### Frontend - https://imageisle.netlify.app 
+___
 Thank you for choosing ImageIsle! We hope you enjoy using our platform to find the perfect images for your projects.
 
 Happy browsing!
