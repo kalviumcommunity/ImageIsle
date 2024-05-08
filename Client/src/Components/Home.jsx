@@ -4,6 +4,7 @@ import ImageCarousel from "./ImageCarousel";
 import "./HomeCss.css";
 import Nav from "./Nav";
 
+
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 function Home() {
