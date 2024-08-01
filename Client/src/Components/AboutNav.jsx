@@ -23,19 +23,28 @@ function AboutNav() {
           </button>
         </div>
         <div className="user-container">
-          <button id="add-img">
-            <p id="add">+</p>
+          <div>
+            <button id="add-img">
+              <p id="add">+</p>
             </button>
-          <Link to="/" id="nav-link">
-            <p>Home</p>
-          </Link>
-          <Link to="/login" id="nav-link">
-            <p>Login</p>
-          </Link>
-          <img src={circle} alt="profile" id="profile-icon" />
+          </div>
+          <div>
+            <Link to="/" id="nav-link">
+              <p>Home</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/login" id="nav-link">
+              <p>Login</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/profile">
+              <img src={circle} alt="profile" id="profile-icon" />
+            </Link>
+          </div>
         </div>
       </nav>
-      <hr />
     </div>
   );
 }

@@ -11,7 +11,9 @@ function About() {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
-      <h1 className="about-heading">About imageIsle</h1>
+      <h1 className="about-heading">
+        About <span id="about-title">imageIsle</span>
+      </h1>
       <div className="about-container">
         <p className="about-para">
           <h2 id="about-startmsg">Welcome to imageIsle,</h2>
