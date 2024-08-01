@@ -1,85 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 *{
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
     font-family: "Varela Round", sans-serif;
     padding: 0px;
     margin: 0px;
 }
+
+/* nav css */
 .navbar{
-    background-color: white;
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 0.5px solid black; */
-    padding: 2.5vh;
-}
-.logoOne{
-    width: 3rem;
-    height: 3rem;
-}
-.details{
-    display: flex;
     align-items: center;
-}
-.circle{
-    width: 3rem;
-    height: 3rem;
-    cursor: pointer;
+    padding: 20px 20px 25px; 
 }
 
-.details *{
-    margin-right: 2.5vh;
+#logo{
+    height: 40px;
 }
-.details button{
-    width: 7rem;
-    height: 2rem;
-}
-.nav-flex{
+/* search-container css */
+.navbar .search-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
 }
-.search{
-    width: 60rem;
-    margin-left: 10rem;
+#search-input{
+    width: 70%;
+    padding: 10px;
+    border: 0.5px solid black;
+    border-radius: 20px;
+} 
+#search-btn{
+    border-radius: 20px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
     border: none;
-    background-color: #efefef;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    outline: none;
-}
-.search-btn img{
-    width: 1.5rem;
-}
-.search-btn{
-    border-left: none;
-    border: none;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    margin-left: -65px;
     width: 4rem;
+}
+#search-img{
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    height: 32px;
 }
-.search-btn:hover{
-    background-color: #e6e3e3;
+
+/* user-container css */
+.user-container {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
 }
-.add{
-    border-radius: 5px;
+
+#add-img{
+    margin-right: 30%;   
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
     border: none;
     cursor: pointer;
-    color: rgb(188, 188, 188);
+}
+#add{
+    font-size: 20px;
+}
+#nav-link{
+    margin-right: 20%;
+    text-decoration: none;
+    color: rgb(116, 116, 116);
     transition: color 0.3s ease; 
 }
-.add:hover{
+#nav-link:hover{
     color: black;
 }
-input::placeholder{
-    padding: 1px;
-}
-input[type="text"] {
-    padding-left: 20px; 
-}
-p{
-    color: rgb(173, 172, 172);
-    cursor: pointer;
-    transition: color 0.3s ease; 
-}
-p:hover{
-    color: black;
+#profile-icon{
+    height: 40px;
+    /* margin-left: 10%; */
 }

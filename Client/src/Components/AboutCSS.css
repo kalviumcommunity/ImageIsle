@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 8% 20%;
+}
+
+.about-heading{
+    margin: 10% 20%;
+    font-family: "League Spartan", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -7px;
+}
+.about-para{
+    font-size: 20px;
+    line-height: 1.5;
+}
+#about-startmsg{
+    color: rgb(116, 116, 116);
+    transition: color 0.3s ease; 
+}
+#about-startmsg:hover{
+    color: black;
+}
+
+.about-para #about-para1{
+    color: rgb(116, 116, 116);
+    transition: color 0.3s ease; 
+}
+#about-para1:hover{
+    color: black;
+}
+
+.about-para #about-para2{
+    color: rgb(116, 116, 116);
+    transition: color 0.3s ease; 
+}
+#about-para2:hover{
+    color: black;
+}
+.sub-head{
+    color: rgb(116, 116, 116);
+    transition: color 0.3s ease; 
+}
+.sub-head:hover{
+    color: black;
+}
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: rgb(0, 0, 0); /* Change to a fixed color for testing */
+    transform-origin: 0%;
+    z-index: 1000; /* Ensure it is above other content */
+}
