@@ -39,21 +39,32 @@ function Nav() {
           </button>
         </div>
         <div className="user-container">
+          <div>
+            <button id="add-img">
+              <p id="add">+</p>
           <button id="add-img">
             <p id="add" onClick={()=>{
     wid.current.open();
   }}>+</p>
             </button>
-          <Link to="/login" id="nav-link">
-            <p>Login</p>
-          </Link>
-          <Link to="/about" id="nav-link">
-            <p>About</p>
-          </Link>
-          <img src={circle} alt="profile" id="profile-icon" />
+          </div>
+          <div>
+            <Link to="/login" id="nav-link">
+              <p>Login</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/about" id="nav-link">
+              <p>About</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/profile">
+              <img src={circle} alt="profile" id="profile-icon" />
+            </Link>
+          </div>
         </div>
       </nav>
-      <hr />
     </div>
   );
 }
