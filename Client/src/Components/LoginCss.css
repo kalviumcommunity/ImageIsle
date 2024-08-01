@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.login-welcome{
+    margin: 20% 60% 0% 10%;
+}
+.login-text{
+    font-size: 1.5em;
+}
+#login-text-login{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    letter-spacing: -6.1px;
+    font-size: 70px;
+}
+#login-title{
+    font-family: "League Spartan", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -7px;
+}
+.login-form-container{
+    margin: -12% 10% 0% 60%;
+}
+.login-form{
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    padding: 40px 0px 40px 30px;
+    margin-right: 20%;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+}
+.login-form input{
+    box-shadow: 3px 3px #323232;
+    padding: 10px 50px 10px 20px;
+}
+.login-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-btn{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+    cursor: pointer;
+}

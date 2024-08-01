@@ -3,7 +3,7 @@ import circle from "../assets/circle.png";
 import Search from "../assets/search.png";
 import { Link } from "react-router-dom";
 import "./NavCss.css";
-function Nav() {
+function AboutNav() {
   return (
     <div>
       <nav className="navbar">
@@ -26,11 +26,11 @@ function Nav() {
           <button id="add-img">
             <p id="add">+</p>
             </button>
+          <Link to="/" id="nav-link">
+            <p>Home</p>
+          </Link>
           <Link to="/login" id="nav-link">
             <p>Login</p>
-          </Link>
-          <Link to="/about" id="nav-link">
-            <p>About</p>
           </Link>
           <img src={circle} alt="profile" id="profile-icon" />
         </div>
@@ -40,4 +40,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default AboutNav;
