@@ -3,7 +3,23 @@ import circle from "../assets/circle.png";
 import Search from "../assets/search.png";
 import { Link } from "react-router-dom";
 import "./NavCss.css";
+import { useEffect, useRef, useState } from "react";
 function Nav() {
+  const [link,setlink]=useState()
+  const wid=useRef(null)
+  useEffect(()=>{
+    let myWidget = cloudinary.createUploadWidget({
+      cloudName: 'dfgoxzfzy', 
+      uploadPreset: 'raahul'}, (error, result) => { 
+        if (!error && result && result.event === "success") { 
+          console.log('Done! Here is the image info: ', result.info);
+          setlink(result.info.secure_url) 
+        }
+      }
+    )
+    wid.current= myWidget
+  },[])
+
   return (
     <div>
       <nav className="navbar">
@@ -24,7 +40,9 @@ function Nav() {
         </div>
         <div className="user-container">
           <button id="add-img">
-            <p id="add">+</p>
+            <p id="add" onClick={()=>{
+    wid.current.open();
+  }}>+</p>
             </button>
           <Link to="/login" id="nav-link">
             <p>Login</p>
