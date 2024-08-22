@@ -2,8 +2,11 @@ import logo1 from "../assets/logo1.png";
 import circle from "../assets/circle.png";
 import Search from "../assets/search.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import DropDown from "./DropDown";
 import "./NavCss.css";
 function AboutNav() {
+  const [openProfile, setOpenProfile] = useState(false);
   return (
     <div>
       <nav className="navbar">
@@ -39,11 +42,15 @@ function AboutNav() {
             </Link>
           </div>
           <div>
-            <Link to="/profile">
-              <img src={circle} alt="profile" id="profile-icon" />
-            </Link>
+              <img
+                src={circle}
+                onClick={() => setOpenProfile((prev) => !prev)}
+                alt="profile"
+                id="profile-icon"
+              />
           </div>
         </div>
+        {openProfile && <DropDown />}
       </nav>
     </div>
   );
