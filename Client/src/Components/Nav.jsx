@@ -4,21 +4,27 @@ import Search from "../assets/search.png";
 import { Link } from "react-router-dom";
 import "./NavCss.css";
 import { useEffect, useRef, useState } from "react";
+import DropDown from "./DropDown";
 function Nav() {
-  const [link,setlink]=useState()
-  const wid=useRef(null)
-  useEffect(()=>{
-    let myWidget = cloudinary.createUploadWidget({
-      cloudName: 'dfgoxzfzy', 
-      uploadPreset: 'raahul'}, (error, result) => { 
-        if (!error && result && result.event === "success") { 
-          console.log('Done! Here is the image info: ', result.info);
-          setlink(result.info.secure_url) 
+  const [link, setlink] = useState();
+  const wid = useRef(null);
+  const [openProfile, setOpenProfile] = useState(false);
+
+  useEffect(() => {
+    let myWidget = cloudinary.createUploadWidget(
+      {
+        cloudName: "dfgoxzfzy",
+        uploadPreset: "raahul",
+      },
+      (error, result) => {
+        if (!error && result && result.event === "success") {
+          console.log("Done! Here is the image info: ", result.info);
+          setlink(result.info.secure_url);
         }
       }
-    )
-    wid.current= myWidget
-  },[])
+    );
+    wid.current = myWidget;
+  }, []);
 
   return (
     <div>
@@ -40,12 +46,13 @@ function Nav() {
         </div>
         <div className="user-container">
           <div>
-            <button id="add-img">
+            <button
+              id="add-img"
+              onClick={() => {
+                wid.current.open();
+              }}
+            >
               <p id="add">+</p>
-          <button id="add-img">
-            <p id="add" onClick={()=>{
-    wid.current.open();
-  }}>+</p>
             </button>
           </div>
           <div>
@@ -59,11 +66,15 @@ function Nav() {
             </Link>
           </div>
           <div>
-            <Link to="/profile">
-              <img src={circle} alt="profile" id="profile-icon" />
-            </Link>
+            <img
+              src={circle}
+              onClick={() => setOpenProfile((prev)=> !prev)}
+              alt="profile"
+              id="profile-icon"
+            />
           </div>
         </div>
+        {openProfile && <DropDown />}
       </nav>
     </div>
   );

@@ -4,9 +4,7 @@ import ImageCarousel from "./ImageCarousel";
 import "./HomeCss.css";
 import Nav from "./Nav";
 
-
 const API_KEY = import.meta.env.VITE_API_KEY;
-
 function Home() {
   const [images, setImages] = useState([]);
 
@@ -21,7 +19,7 @@ function Home() {
 
   return (
     <div>
-      <Nav/>
+      <Nav />
       <div className="webDetails">
         <div>
           <span className="logo">imageisle</span>
@@ -31,6 +29,15 @@ function Home() {
           <p className="caption">Powered by creators everywhere.</p>
         </div>
         <ImageCarousel images={images} />
+      </div>
+      {/* <hr /> */}
+      <div id="results">
+        <h3 id="result_name">Search Results :</h3>
+        <div>
+          <div>
+            <img src="" alt="" />
+          </div>
+        </div>
       </div>
     </div>
   );
