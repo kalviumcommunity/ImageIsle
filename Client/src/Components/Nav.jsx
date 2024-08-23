@@ -2,6 +2,7 @@ import logo1 from "../assets/logo1.png";
 import circle from "../assets/circle.png";
 import Search from "../assets/search.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "./NavCss.css";
 import { useEffect, useRef, useState } from "react";
 import DropDown from "./DropDown";
@@ -19,6 +20,10 @@ function Nav() {
       (error, result) => {
         if (!error && result && result.event === "success") {
           console.log("Done! Here is the image info: ", result.info);
+          axios.post("http://localhost:4050/post", {
+            user: "raahul",
+            link: result.info.secure_url,
+          });
           setlink(result.info.secure_url);
         }
       }
@@ -68,7 +73,7 @@ function Nav() {
           <div>
             <img
               src={circle}
-              onClick={() => setOpenProfile((prev)=> !prev)}
+              onClick={() => setOpenProfile((prev) => !prev)}
               alt="profile"
               id="profile-icon"
             />
