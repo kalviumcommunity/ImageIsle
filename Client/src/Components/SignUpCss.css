@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sign-welcome{
+    margin: 20% 60% 0% 10%;
+}
+.sign-text{
+    font-size: 1.5em;
+}
+#login-text-sign{
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    letter-spacing: -6.1px;
+    font-size: 70px;
+}
+#sign-title{
+    font-family: "League Spartan", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: -7px;
+    background: url("../assets/bg1.webp") 50% 50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+.sign-form-container{
+    margin: -12% 10% 0% 60%;
+}
+.sign-form{
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    padding: 40px 0px 40px 30px;
+    margin-right: 20%;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+}
+.sign-form input{
+    box-shadow: 3px 3px #323232;
+    padding: 10px 50px 10px 20px;
+    outline: none;
+}
+.sign-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sign-btn{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+    cursor: pointer;
+}
+#back-btn-img{
+    height: 25px;
+}
