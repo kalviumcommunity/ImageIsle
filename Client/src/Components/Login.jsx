@@ -1,8 +1,26 @@
 import "./LoginCss.css";
 import back from "../assets/left-arrow.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:4050/login", { email, password })
+      .then((res) => {
+        console.log(res);
+        if (res.data === "Success") {
+          navigate("/");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div>
       <div className="back-btn-container">
@@ -15,7 +33,7 @@ function Login() {
           </h1>
         </div>
         <div className="login-form-container">
-          <form action="" className="login-form">
+          <form onSubmit={handleSubmit} action="" className="login-form">
             <div className="login-text">
               <p>
                 <span id="login-text-login">login</span> to continue,
@@ -27,11 +45,16 @@ function Login() {
                 placeholder="E-mail"
                 className="input-emailbx"
                 type="email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
               {/* <label htmlFor="">Password: </label> */}
-              <input placeholder="Password" type="password" />
+              <input
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+              />
             </div>
             <div>
               <p>
@@ -39,9 +62,7 @@ function Login() {
               </p>
             </div>
             <div className="login-btn-container">
-              <Link to="/">
-                <button id="login-btn">Let's goooo →</button>
-              </Link>
+              <button id="login-btn">Let's goooo →</button>
             </div>
           </form>
         </div>
