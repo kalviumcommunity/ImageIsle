@@ -1,71 +1,75 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Varela Round", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
 }
-.logo{
-    font-family: "League Spartan", sans-serif;
-    font-size: 100px;
-    font-weight: 700;
-    letter-spacing: -7px;
-    background: url("../assets/bg1.webp") 50% 50%;
-    background-size: cover;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+
+.logo {
+  font-family: "League Spartan", sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: -7px;
+  background: url("../assets/bg1.webp") 50% 50%;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 
 }
-.caption{
-    line-height: 3vh;
-    font-size: 18px;
+
+.caption {
+  line-height: 3vh;
+  font-size: 18px;
 }
-.caption_one{
-    margin-top: 2vh;
+
+.caption_one {
+  margin-top: 2vh;
 }
-.webDetails{
-    display: flex;
-    justify-content: space-between;
-    margin: 10vh auto;
-    width: 60%;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    flex-direction: initial;
+
+.webDetails {
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh auto;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
 .carousel {
-    position: relative;
-    width: 30rem;
-    height: 400px; 
-    overflow: hidden;
-    border-radius: 50px;
-  }
-  
-  .carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .carousel-item.active {
-    opacity: 1;
-  }
-  
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  position: relative;
+  width: 30rem;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50px;
+}
 
-.profile-icon{
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-icon {
   height: 180px;
 }
-.profile-details{
+
+.profile-details {
   display: flex;
   justify-content: center;
   align-items: end;
@@ -74,18 +78,19 @@
   margin-bottom: 10%;
 }
 
-.user-name{
+.user-name {
   margin-bottom: 1%;
 }
 
-.user-button{
+.user-button {
   margin-bottom: 1.1%;
 }
 
-.user-icons{
+.user-icons {
   height: 20px;
 }
-.user-collection-container{
+
+.user-collection-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +102,7 @@
   align-items: center;
   margin-top: 1%;
   cursor: pointer;
-  position: relative; 
+  position: relative;
 }
 
 .user-collection::after {
@@ -106,7 +111,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; 
+  height: 2px;
   background-color: currentColor;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -115,6 +120,7 @@
 .user-collection:hover::after {
   transform: scaleX(1);
 }
-#back-btn-img{
+
+#back-btn-img {
   height: 25px;
 }
