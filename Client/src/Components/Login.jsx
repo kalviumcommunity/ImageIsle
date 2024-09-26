@@ -1,6 +1,6 @@
 import "./LoginCss.css";
 import back from "../assets/left-arrow.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
