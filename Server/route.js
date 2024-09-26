@@ -68,5 +68,18 @@ app.post("/register", (req, res) => {
         })
         .catch((err) => res.json({ error: err.message }));
 });
+app.get("/upload", async (req, res) => {
+    try {
+        const data = await post.find(); 
+        if (!data) {
+            return res.status(404).json({ message: 'Post not found' });
+        } 
+        res.status(200).json({ message: 'successful', data: data }); 
+        console.log(data);
+    } catch (er) { 
+        res.status(500).json({ message: 'Server Error', error: er.message });
+    }
+});
+
 
 module.exports = app;

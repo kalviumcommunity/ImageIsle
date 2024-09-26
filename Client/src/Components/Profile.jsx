@@ -51,7 +51,7 @@ function Profile() {
               />
             </div>
             <div className="user-collection">
-              <p>Uploads </p>
+              <Link to="/upload"><p>Uploads </p></Link>
               <img
                 className="user-icons"
                 id="user-uploads"
