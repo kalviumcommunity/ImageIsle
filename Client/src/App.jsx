@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Signup from "./Components/Signup";
 import Profile from "./Components/Profile";
 import EditProfile from "./Components/EditProfile";
+import Upload from "./Components/Upload";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/edit" element={<EditProfile />} />
+      <Route path="/upload" element={<Upload/>}/>
     </Routes>
   );
 }
