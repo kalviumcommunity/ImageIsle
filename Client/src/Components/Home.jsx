@@ -30,15 +30,6 @@ function Home() {
         </div>
         <ImageCarousel images={images} />
       </div>
-      {/* <hr /> */}
-      <div id="results">
-        <h3 id="result_name">Search Results :</h3>
-        <div>
-          <div>
-            <img src="" alt="" />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
