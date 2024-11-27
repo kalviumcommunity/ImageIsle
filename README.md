@@ -19,7 +19,6 @@ To start browsing and downloading images from ImageIsle, simply visit [website U
 
 
 ### Frontend - https://imageisle.netlify.app 
-### Backend -  https://imageisle.onrender.com
 
 Thank you for choosing ImageIsle! We hope you enjoy using our platform to find the perfect images for your projects.
 
