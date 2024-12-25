@@ -47,9 +47,10 @@ app.post("/login", (req, res) => {
 
 app.post("/register", (req, res) => {
     const { name, email, password } = req.body;
-
+    console.log(req.body)
     userSchemaModel.create({ name, email, password })
         .then((newUser) => {
+            console.log(newUser)
             const mailOptions = {
                 from: "imageisle@outlook.com",
                 to: newUser.email,

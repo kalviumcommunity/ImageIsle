@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
-import Login from "./Components/Login";
+import Login from "./Components/Auth/Login";
 import About from "./Components/About";
-import Signup from "./Components/Signup";
+import Signup from "./Components/Auth/SignUp";
 import Profile from "./Components/Profile";
 import EditProfile from "./Components/EditProfile";
 import Upload from "./Components/Upload";
@@ -16,7 +16,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/edit" element={<EditProfile />} />
-      <Route path="/upload" element={<Upload/>}/>
+      <Route path="/upload" element={<Upload />} />
     </Routes>
   );
 }

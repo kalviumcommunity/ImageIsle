@@ -1,6 +1,6 @@
-import logo1 from "../assets/logo1.png";
-import circle from "../assets/circle.png";
-import Search from "../assets/search.png";
+import logo1 from "./assets/logo1.png";
+import circle from "./assets/circle.png";
+import Search from "./assets/search.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./NavCss.css";
@@ -10,6 +10,7 @@ function Nav() {
   const [link, setlink] = useState();
   const wid = useRef(null);
   const [openProfile, setOpenProfile] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     let myWidget = cloudinary.createUploadWidget(
@@ -29,6 +30,13 @@ function Nav() {
       }
     );
     wid.current = myWidget;
+  }, []);
+
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+    if (email) {
+      setIsAuthenticated(true);
+    }
   }, []);
 
   return (
@@ -61,10 +69,12 @@ function Nav() {
             </button>
           </div>
           <div>
-            {!localStorage.getItem("email") && (
-              <Link to="/login" id="nav-link">
-                <p>Login</p>
-              </Link>
+            {!isAuthenticated && (
+              <div>
+                <Link to="/login" id="nav-link">
+                  <p>Login</p>
+                </Link>
+              </div>
             )}
           </div>
           <div>
