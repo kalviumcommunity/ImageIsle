@@ -32,7 +32,7 @@ function Googleauth(props) {
             .post("http://localhost:4050/register", {
               email: user.email,
               password: user.displayName,
-              username: user.displayName,
+              name: user.displayName,
             })
             .then((res) => {
               console.log(res.data);
