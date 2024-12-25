@@ -61,9 +61,11 @@ function Nav() {
             </button>
           </div>
           <div>
-            <Link to="/login" id="nav-link">
-              <p>Login</p>
-            </Link>
+            {!localStorage.getItem("email") && (
+              <Link to="/login" id="nav-link">
+                <p>Login</p>
+              </Link>
+            )}
           </div>
           <div>
             <Link to="/about" id="nav-link">

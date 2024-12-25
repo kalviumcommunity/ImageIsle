@@ -1,8 +1,9 @@
-import "../Components/SignUpCss.css"
+import "../Components/SignUpCss.css";
 import back from "../assets/left-arrow.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import Googleauth from "./firbase";
 
 function Signup() {
   const [name, setName] = useState();
@@ -12,13 +13,14 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:4050/register', { name, email, password })
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+      .post("http://localhost:4050/register", { name, email, password })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
   return (
     <div>
       <div className="back-btn-container">
+        <Googleauth mode="sign" />
         <Link to="/">
           <img id="back-btn-img" src={back} alt="" />
         </Link>
@@ -59,9 +61,7 @@ function Signup() {
               />
             </div>
             <div className="sign-btn-container">
-                <button id="sign-btn">
-                  Let's goooo →
-                </button>
+              <button id="sign-btn">Let's goooo →</button>
             </div>
           </form>
         </div>

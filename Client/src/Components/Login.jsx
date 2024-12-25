@@ -3,12 +3,13 @@ import back from "../assets/left-arrow.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import Googleauth from "./firbase";
 
 function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -16,7 +17,7 @@ function Login() {
       .then((res) => {
         console.log(res);
         if (res.data === "Success") {
-          localStorage.setItem("email",email)
+          localStorage.setItem("email", email);
           navigate("/");
         }
       })
@@ -25,6 +26,7 @@ function Login() {
   return (
     <div>
       <div className="back-btn-container">
+        <Googleauth mode="login" />
         <Link to="/">
           <img id="back-btn-img" src={back} alt="" />
         </Link>

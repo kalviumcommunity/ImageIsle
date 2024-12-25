@@ -7,7 +7,10 @@ const DropDown = () => {
         <Link to="/profile">
           <li id="pro">Profile</li>
         </Link>
-        <li>Logout</li>
+        <li onClick={()=>{
+          localStorage.clear()
+          location.reload()
+        }}>Logout</li>
       </ul>
     </div>
   );
