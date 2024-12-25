@@ -1,6 +1,6 @@
-import logo1 from "../assets/logo1.png";
-import circle from "../assets/circle.png";
-import Search from "../assets/search.png";
+import logo1 from "./assets/logo1.png";
+import circle from "./assets/circle.png";
+import Search from "./assets/search.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import DropDown from "./DropDown";
@@ -42,12 +42,12 @@ function AboutNav() {
             </Link>
           </div>
           <div>
-              <img
-                src={circle}
-                onClick={() => setOpenProfile((prev) => !prev)}
-                alt="profile"
-                id="profile-icon"
-              />
+            <img
+              src={circle}
+              onClick={() => setOpenProfile((prev) => !prev)}
+              alt="profile"
+              id="profile-icon"
+            />
           </div>
         </div>
         {openProfile && <DropDown />}

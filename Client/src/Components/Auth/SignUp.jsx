@@ -1,9 +1,9 @@
-import "../Components/SignUpCss.css";
+import "./SignUp.css";
 import back from "../assets/left-arrow.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import Googleauth from "./firbase";
+import Googleauth from "../Firebase/Firbase";
 
 function Signup() {
   const [name, setName] = useState();
@@ -51,6 +51,9 @@ function Signup() {
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
               />
+            </div>
+            <div>
+              <Googleauth mode="/sign" />
             </div>
             <div>
               {/* <label htmlFor="">Password: </label> */}

@@ -1,8 +1,8 @@
-import circle from "../assets/circle.png";
-import down from "../assets/down-arrow.png";
-import like from "../assets/like.png";
-import upload from "../assets/upload.png";
-import back from "../assets/left-arrow.png";
+import circle from "./assets/circle.png";
+import down from "./assets/down-arrow.png";
+import like from "./assets/like.png";
+import upload from "./assets/upload.png";
+import back from "./assets/left-arrow.png";
 import { Link } from "react-router-dom";
 import "./HomeCss.css";
 
@@ -51,7 +51,9 @@ function Profile() {
               />
             </div>
             <div className="user-collection">
-              <Link to="/upload"><p>Uploads </p></Link>
+              <Link to="/upload">
+                <p>Uploads </p>
+              </Link>
               <img
                 className="user-icons"
                 id="user-uploads"

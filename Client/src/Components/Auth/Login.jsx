@@ -1,9 +1,9 @@
-import "./LoginCss.css";
+import "./Login.css";
 import back from "../assets/left-arrow.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import Googleauth from "./firbase";
+import Googleauth from "../Firebase/Firbase";
 
 function Login() {
   const [email, setEmail] = useState();
@@ -58,6 +58,9 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
               />
+            </div>
+            <div>
+              <Googleauth mode="/login" />
             </div>
             <div>
               <p>

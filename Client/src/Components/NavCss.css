@@ -110,5 +110,8 @@
     flex-direction: column;
     gap: 1rem;
     padding-left: 10px;
-    list-style: none;
+    list-style: none;  
 } 
+#logoutBtn{
+    cursor: pointer;
+}
