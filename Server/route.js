@@ -3,6 +3,7 @@ const post = require("./model");
 const mongoose = require("mongoose");
 const app = express();
 const nodemailer = require("nodemailer");
+const env=require("dotenv").config()
 const cors = require("cors");
 const userSchemaModel = require("./signUp");
 
@@ -10,10 +11,10 @@ app.use(express.json());
 app.use(cors());
 
 const transporter = nodemailer.createTransport({
-    service: "outlook",
+    service: "gmail",
     auth: {
-        user: "imageisle@outlook.com",
-        pass: "rahul@23",
+        user: process.env.MAIL,
+        pass: process.env.PASS,
     },
 });
 
@@ -68,6 +69,8 @@ app.post("/register", (req, res) => {
         })
         .catch((err) => res.json({ error: err.message }));
 });
+
+
 app.get("/upload", async (req, res) => {
     try {
         const data = await post.find(); 
