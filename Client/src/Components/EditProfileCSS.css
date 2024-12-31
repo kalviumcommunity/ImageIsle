@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5; /* Optional: Adds a light background */
+    font-family: Arial, sans-serif; /* Ensures consistent styling */
+  }
+  
+  .edit-profile-container {
+    max-width: 600px; /* Increased max width */
+    width: 100%;
+    padding: 40px; /* Increased padding for larger size */
+    background: white; /* White background for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .edit-profile-title {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 50px; /* Increased font size */
+    letter-spacing: -2px;
+    color: #323232;
+    text-align: center; /* Centers the title text */
+    margin-bottom: 30px; /* Added more spacing below title */
+  }
+  
+  .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap between form elements */
+  }
+  
+  .edit-profile-form input,
+  .edit-profile-form textarea {
+    box-shadow: 3px 3px #323232;
+    padding: 15px; /* Increased padding for inputs */
+    font-size: 1.2em; /* Increased font size for better readability */
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .edit-profile-form input:focus,
+  .edit-profile-form textarea:focus {
+    border: 2px solid var(--input-focus);
+  }
+  
+  .edit-profile-btn-group {
+    display: flex;
+    justify-content: space-between; /* Adjusts button spacing */
+    gap: 15px; /* Increased gap between buttons */
+  }
+  
+  .save-btn,
+  .cancel-btn {
+    padding: 15px 25px; /* Increased padding for buttons */
+    font-size: 1.2em; /* Larger text on buttons */
+    border-radius: 5px;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+    cursor: pointer;
+    background: white;
+    font-family: "League Spartan", sans-serif;
+  }
+  
+  .save-btn:hover {
+    background: var(--input-focus);
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background: #ccc;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  #back-btn-img {
+    height: 30px; /* Slightly larger back button */
+  }
+  

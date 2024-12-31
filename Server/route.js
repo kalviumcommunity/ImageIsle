@@ -35,7 +35,7 @@ app.post("/login", (req, res) => {
         .then(user => {
             if (user) {
                 if (user.password === password) {
-                    res.json("Success")
+                    res.json({...user,mess:"Success"})
                 } else {
                     res.json("the password is incorrect")
                 }
@@ -46,9 +46,9 @@ app.post("/login", (req, res) => {
 })
 
 app.post("/register", (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password,photo } = req.body;
     console.log(req.body)
-    userSchemaModel.create({ name, email, password })
+    userSchemaModel.create({ name, email, password,photo })
         .then((newUser) => {
             console.log(newUser)
             const mailOptions = {
@@ -85,5 +85,29 @@ app.get("/upload", async (req, res) => {
     }
 });
 
+app.put("/updateProfile", async (req, res) => {
+    const { userId, name, email } = req.body;
+    
+    if (!userId || (!name && !email)) {
+      return res.status(400).json({ message: "Invalid request. Missing fields." });
+    }
+    
+    try {
+      // Update the user's information
+      const updatedUser = await userSchemaModel.findOneAndUpdate(
+        {email:email}, // Find the user by their ID
+        { $set: { name, email } }, // Update the name and email
+        { new: true } // Return the updated document
+      );
+    
+      if (!updatedUser) {
+        return res.status(404).json({ message: "User not found" });
+      }
+    
+      res.status(200).json({ message: "Profile updated successfully", user: updatedUser });
+    } catch (error) {
+      res.status(500).json({ message: "Error updating profile", error: error.message });
+    }
+  });  
 
 module.exports = app;

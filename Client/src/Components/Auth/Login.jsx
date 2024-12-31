@@ -16,8 +16,9 @@ function Login() {
       .post("http://localhost:4050/login", { email, password })
       .then((res) => {
         console.log(res);
-        if (res.data === "Success") {
-          localStorage.setItem("email", email);
+        if (res.data.mess === "Success") {
+          localStorage.setItem("userId", email);
+          localStorage.setItem("user",JSON.stringify(res.data._doc))
           navigate("/");
         }
       })
@@ -26,7 +27,6 @@ function Login() {
   return (
     <div>
       <div className="back-btn-container">
-        <Googleauth mode="login" />
         <Link to="/">
           <img id="back-btn-img" src={back} alt="" />
         </Link>
