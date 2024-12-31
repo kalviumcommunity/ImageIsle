@@ -1,7 +1,7 @@
 import "./SignUp.css";
 import back from "../assets/left-arrow.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Googleauth from "../Firebase/Firbase";
 
@@ -9,18 +9,35 @@ function Signup() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [link, setlink] = useState();
 
+    const wid = useRef(null);
+  
+    useEffect(() => {
+      let myWidget = cloudinary.createUploadWidget(
+        {
+          cloudName: "dfgoxzfzy",
+          uploadPreset: "raahul",
+        },
+        (error, result) => {
+          if (!error && result && result.event === "success") {
+            console.log("Done! Here is the image info: ", result.info);
+            setlink(result.info.secure_url);
+          }
+        }
+      );
+      wid.current = myWidget;
+    }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4050/register", { name, email, password })
+      .post("http://localhost:4050/register", { name, email, password,photo:link })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
   return (
     <div>
       <div className="back-btn-container">
-        <Googleauth mode="sign" />
         <Link to="/">
           <img id="back-btn-img" src={back} alt="" />
         </Link>
@@ -52,6 +69,16 @@ function Signup() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+            <div>
+            <button
+              id="add-img"
+              onClick={() => {
+                wid.current.open();
+              }}
+            >
+              <p id="add">Upload Your Photo</p>
+            </button>
+          </div>
             <div>
               <Googleauth mode="/sign" />
             </div>

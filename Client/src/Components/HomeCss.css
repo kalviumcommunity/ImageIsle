@@ -123,3 +123,12 @@
 #back-btn-img {
   height: 25px;
 }
+
+.profile-icon {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Match the width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image is properly cropped */
+  border: 2px solid #ccc; /* Optional: Adds a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}

@@ -33,7 +33,7 @@ function Nav() {
   }, []);
 
   useEffect(() => {
-    const email = localStorage.getItem("email");
+    const email = localStorage.getItem("userId");
     if (email) {
       setIsAuthenticated(true);
     }
